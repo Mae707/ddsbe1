@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use Illuminate\Http\Response;
 
-trait ApiResponser
+trait ApiResponseTrait
 {
     // Success Response
     protected function successResponse($data, $message = "Success", $code = Response::HTTP_OK)

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Exceptions;
-use App\Traits\ApiResponser;
+use App\Traits\ApiResponseTrait;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Auth\AuthenticationException;
@@ -15,7 +15,7 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
-    use ApiResponser;
+    use ApiResponseTrait;
     /**
      * A list of the exception types that should not be reported.
      *

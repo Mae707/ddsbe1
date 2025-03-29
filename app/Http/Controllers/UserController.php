@@ -26,4 +26,17 @@ class UserController extends Controller
 
         return $this->successResponse($user, "User found");
     }
+
+    public function store(Request $request)
+    {
+        // Validate input
+        $this->validate($request, [
+            'username' => 'required|string',
+            'password' => 'required|string',
+            'gender' => 'required|in:Male,Female,Other'
+        ]);
+
+        // Store user
+        return response()->json(['status' => 'success', 'message' => 'User created successfully']);
+    }
 }
