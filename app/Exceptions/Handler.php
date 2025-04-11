@@ -17,6 +17,7 @@ class Handler extends ExceptionHandler
 {
     use ApiResponser;
 
+    /*ignore this message
     /**
      * A list of the exception types that should not be reported.
      *
